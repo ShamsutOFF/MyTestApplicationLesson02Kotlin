@@ -1,15 +1,17 @@
 package com.example.mytestapplicationlesson02kotlin
 
-class Model {
-    var subscriber: ((string: String?) -> Unit)? = null
-    private var importantString: String? = null
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 
-    fun setValue(value: String?) {
-        importantString = value
-        subscriber?.invoke(value)
-    }
+object Model {
 
-    fun getValue(): String? {
-        return importantString
-    }
+    var importantString: String? = null
+        set(value) {
+            field = value
+            _importantLiveData.value = field
+        }
+
+    private val _importantLiveData = MutableLiveData<String>()
+        val importantLiveData : LiveData < String >
+        get() = _importantLiveData
 }
