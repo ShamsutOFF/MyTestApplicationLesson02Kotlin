@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.inputEditText.addTextChangedListener {
-            Model.importantString = it.toString()
+            Model.importantLiveData.value = it.toString()
         }
 
         binding.subscribeButton.setOnClickListener {
