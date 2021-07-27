@@ -15,10 +15,17 @@
         android:text="Hello World!" />
 
     <Button
-        android:id="@+id/toast_button"
+        android:id="@+id/subscribe_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Испечь тост"/>
+        android:text="Подписаться"/>
+
+    <Button
+        android:id="@+id/unsubscribe_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Отписаться"/>
 
 </LinearLayout>
